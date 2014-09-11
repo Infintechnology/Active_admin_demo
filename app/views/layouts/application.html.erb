@@ -52,9 +52,9 @@
     <li><%= link_to 'Edit Account', edit_user_registration_path if user_signed_in? %></li>
               
               <li><%= link_to "Sign up", new_user_registration_path if !user_signed_in?%></li>
-              <li><%= link_to "sign in", new_user_session_path if !user_signed_in?%></li>
-              <li><%= link_to 'Add Profile', new_profile_path if !current_user.profile %></li>
-              <li><%= link_to 'Edit Profile', edit_profile_path(current_user.profile) if current_user.profile %></li>
+              <li><%= link_to "sign in", new_user_session_path if !user_signed_in? %></li>
+              <li><%= link_to 'Add Profile', new_profile_path if current_user &&!current_user.profile %></li>
+              <li><%= link_to 'Edit Profile', edit_profile_path(current_user.profile) if current_user && current_user.profile %></li>
               <li><%= link_to "Sign out", destroy_user_session_path, :method => :delete if user_signed_in? %></li>
           </ul>
         </div>
