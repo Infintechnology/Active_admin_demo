@@ -1,0 +1,42 @@
+<p id="notice"><%= notice %></p>
+<p>
+  <strong>Image</strong>
+  <%= image_tag @profile.photo ,size: "200x100" %>
+</p>
+<p>
+  <strong>First name:</strong>
+  <%= @profile.first_name %>
+</p>
+
+<p>
+  <strong>Last name:</strong>
+  <%= @profile.last_name %>
+</p>
+
+<p>
+  <strong>Age:</strong>
+  <%= @profile.age %>
+</p>
+
+<p>
+  <strong>Sex:</strong>
+  <%= @profile.sex %>
+</p>
+
+<p>
+  <strong>Maritial status:</strong>
+  <%= @profile.maritial_status %>
+</p>
+
+<p>
+  <strong>Contact:</strong>
+  <%= @profile.contact %>
+</p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @profile.Address %>
+</p>
+
+<%= link_to 'Edit', edit_profile_path(@profile) %> |
+<%= link_to 'Back', profiles_path %>
