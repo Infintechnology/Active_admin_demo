@@ -1,10 +1,8 @@
 Rails.application.routes.draw do
 
-  resources :profiles
-
-  get 'home/index'
-
-  devise_for :users
+  devise_for :users 
+   
+    resources :profiles
   root to: "home#index"
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)

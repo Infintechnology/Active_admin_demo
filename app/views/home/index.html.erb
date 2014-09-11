@@ -1,7 +1,6 @@
-<div>
-<% if current_user.profile %>
-  <h3><%= link_to 'Edit Profile', edit_profile_path(current_user.profile) %></h3>
-<% else %>
-  <h3><%= link_to 'Add Profile', new_profile_path %></h3>
-<% end %>
-</div>
+<h2>About Us</h2>
+
+<p>Hello Friends Its a demo app integrated with devise ,activeadmin gem
+Bootstrap theme is also installed in it In Admin part admin is capable of creating user 
+and User has one relation with profile we can also add photo in profile 
+Paperclip gem is used to add image in profile </p>
